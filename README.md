@@ -1,4 +1,4 @@
-#Hatef's Arch Linux Install Scripts (HALIS)
+# Hatef's Arch Linux Install Scripts (HALIS)
 
 ## Introduction
 
