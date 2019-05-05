@@ -38,7 +38,13 @@ cd /tmp/pacaur_install
 sudo pacman -S binutils make gcc fakeroot pkg-config --noconfirm --needed
 
 # Install pacaur dependencies from arch repos
-sudo pacman -S expac yajl git --noconfirm --needed
+sudo pacman -S expac yajl git jq meson gtest gmock --noconfirm --needed
+
+# Install "auracle-git" from AUR
+if [ ! -n "$(pacman -Qs auracle-git)" ]; then
+    curl -o PKGBUILD https://aur.archlinux.org/cgit/aur.git/plain/PKGBUILD?h=auracle-git
+    makepkg PKGBUILD --skippgpcheck --install --needed
+fi
 
 # Install "cower" from AUR
 if [ ! -n "$(pacman -Qs cower)" ]; then
