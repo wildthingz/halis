@@ -16,7 +16,7 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # coding
-pacaur -S cmake gsl htop gitkraken pandoc rust --noconfirm --needed
+pacaur -S cmake gsl htop --noconfirm --needed
 
 # slack
 pacaur -S slack-desktop --noconfirm --needed
@@ -29,6 +29,9 @@ pacaur -S python-numpy python-scipy python-matplotlib python-h5py python-virtual
 
 # LaTeX
 pacaur -S texlive-most --noconfirm --needed
+
+# fenics
+pacaur -S hdf5-openmpi hypre scotch mumps petsc dolfin --noconfirm --needed
 
 # Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
